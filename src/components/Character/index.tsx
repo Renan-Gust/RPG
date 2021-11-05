@@ -5,9 +5,10 @@ type PositionProps = {
     x: number;
     y: number;
     side: CharacterSides;
+    name: string;
 }
 
-export const Character = ({ x, y, side }: PositionProps) => {
+export const Character = ({ x, y, side, name }: PositionProps) => {
     const size = 30
 
     const sides = {
@@ -24,6 +25,10 @@ export const Character = ({ x, y, side }: PositionProps) => {
             top={y * size}
             position={sides[side] ?? 0}
         >
+
+            <C.Name name={name}>
+                {name}
+            </C.Name>
             
         </C.Container>
     )

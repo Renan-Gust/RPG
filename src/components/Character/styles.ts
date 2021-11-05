@@ -11,3 +11,9 @@ export const Container = styled.div<{ left: number, top: number, size: number, p
     background-image: url('/assets/char.png');
     background-position: 0px ${props => props.position}px;
 `;
+
+export const Name = styled.p<{ name: string }>`
+    color: #fff;
+    position: relative;
+    bottom: 19px;
+`;
